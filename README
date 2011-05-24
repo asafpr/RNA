@@ -1,0 +1,4 @@
+This python module contains tools for computing RNA features such as conservation and accessibility.
+Conservation uses rate4site program from Tel-Aviv university (http://www.tau.ac.il/~itaymay/cp/rate4site.html) you should compile it and have it in your path, if you're working on a 64 bit system call the executable rate4site64
+Accessibility uses RNAfold to compute accessibility of nuclotides along the RNA. RNAfold from the Vienna package (http://rna.tbi.univie.ac.at/) should be in your path.
+Accessibility can be run from command-line with the sequence as a single input
