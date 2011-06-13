@@ -32,6 +32,8 @@ def emma_MSA(seqs,alnfile=None,dndfile=None,emmacmd='emma'):
             seqfile.write(str(seqs[txid])+'\n')
         elif isinstance(seqs[txid],SeqRecord):
             seqfile.write(str(seqs[txid].seq)+'\n')
+        elif isinstance(seqs[txid],str):
+            seqfile.write(seqs[txid]+'\n')
     seqfile.flush()
     os.system(emmacmd+' -sequence '+seqfile.name+' -outseq '+alnfile.name+
               ' -dendoutfile '+dndfile.name+' >& /dev/null')
